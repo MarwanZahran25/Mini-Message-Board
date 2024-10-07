@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1><%=title%></h1>
+    <div class="conntainer">
+        <% messages.map((m, i) => { %>
+            <% const date = `${m.added.getDate()}-${m.added.getMonth() + 1}-${m.added.getFullYear()}` %>
+            <% const link = `/${i}` %>
+            <div class="messageContainer">
+              <div class="messageheader">
+                <div><%= m.user %></div>
+                <div><%= date %></div>
+              </div>
+              <div><%= m.text %></div>
+              <a href="<%= link %>">
+                <button>open</button>
+              </a>
+            </div>
+          <% }) %>
+      </div>
+     
+      <a href="new"><button>Add</button></a>
+    </div>
+  </body>
+</html>

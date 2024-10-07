@@ -1,0 +1,63 @@
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  flex-direction: column;
+  gap:40px
+}
+.conntainer {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  width: 100%;
+  align-items: center;
+}
+.messageContainer {
+  border: 1px black solid;
+  padding: 20px;
+  gap: 20px;
+  display: flex;
+  flex-direction: column;
+}
+.messageheader {
+  display: flex;
+
+  gap: 40px;
+}
+button {
+  background-color: rgb(81, 81, 231);
+  color: white;
+  padding: 5px 20px;
+  border-radius: 10px;
+  border-color: transparent;
+  font-weight: BOLD;
+  transition: scale ease-in-out;
+}
+button:hover {
+  scale: 1.1;
+}
+.btnContainer {
+  display: flex;
+  gap: 8px;
+}
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+label {
+  display: flex;
+  flex-direction: column-reverse;
+  gap: 4px;
+}
+input {
+  padding: 3px 8px;
+}
+textarea {
+  padding: 3px 8px;
+  min-height: 100px;
+}
+button[type="button"] {
+  background-color: gray;
+}

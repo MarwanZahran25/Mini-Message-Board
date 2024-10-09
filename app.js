@@ -35,10 +35,16 @@ app.post("/new", (req, res) => {
   res.redirect("/");
 });
 app.get("/:id", (req, res) => {
-  res.render("message", {
-    number: req.params.id,
-    message: messages[req.params.id],
-  });
+  const message = messages[req.params.id];
+
+  if (message) {
+    res.render("message", {
+      number: req.params.id,
+      message: message,
+    });
+  } else {
+    res.status(404).send("Message not found");
+  }
 });
 app.listen(port, () => {
   console.log(`app is running on port ${port}`);

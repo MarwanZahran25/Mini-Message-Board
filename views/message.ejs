@@ -4,12 +4,14 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="styles.css" />
+    <%message%>
     <title>message <%=number%></title>
+
   </head>
   <body>
-    <div><%=message.added%></div>
-    <div><%=message.user%></div>
-    <div><%=message.text%></div>
+    <div><span class="text">on :</span> <%=message.added.toDateString()%></div>
+    <div><spam class="text">from :</spam> <%=message.user%></div>
+    <div class="text"><%=message.text%></div>
     <a href="/"><button >Home</button></a>
   </body>
 </html>

@@ -32,7 +32,7 @@ button {
   border-radius: 10px;
   border-color: transparent;
   font-weight: BOLD;
-  transition: scale ease-in-out;
+  transition: scale ease-in-out 150ms;
 }
 button:hover {
   scale: 1.1;
@@ -60,4 +60,7 @@ textarea {
 }
 button[type="button"] {
   background-color: gray;
+}
+.text{
+  font-weight: bold;
 }
